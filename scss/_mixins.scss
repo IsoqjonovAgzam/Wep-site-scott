@@ -1,0 +1,34 @@
+@mixin bold-text($color, $font-size, $line-height) {
+  color: $color;
+  font-weight: 700;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin regular-text($color) {
+  color: $color;
+  font-weight: 400;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@mixin yellow-link {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: $white-color;
+  background-color: $yellow-color;
+  padding: 14px 39px;
+  transition: 450ms background-color ease;
+
+  &:hover {
+    background-color: $white-color;
+    color: $yellow-color;
+    border: 3px solid $yellow-color;
+  }
+}
+
+@mixin flex-items {
+  display: flex;
+}

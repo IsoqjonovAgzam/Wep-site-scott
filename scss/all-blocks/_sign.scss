@@ -1,0 +1,44 @@
+.sign {
+  background-color: $dark_navy-color;
+  padding: 102px 0;
+
+  &__container {
+    @include flex-items;
+    align-items: center;
+    justify-content: space-between;
+
+    .sign__heading {
+      @include bold-text($white-color, 48px, 48px);
+      width: 445px;
+    }
+
+    .sign__box {
+      display: inline-block;
+      background-color: $light_grey-color;
+      padding: 8px 15px;
+
+      .sign__link {
+        @include flex-items;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .sign__item {
+        display: inline-block;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 10px;
+
+        .sign__text {
+          @include bold-text($dark_navy-color, 10px, 15px);
+          display: block;
+        }
+
+        .sign__text + .sign__text {
+          @include bold-text($dark_navy-color, 20px, 24px);
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.hero {
+  background-image: url('../../images/hero/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 180px;
+  padding: 152px 0;
+  position: relative;
+
+  &::before {
+    content: url('../../images/hero/line.png');
+    position: absolute;
+    top: 353px;
+    left: 0;
+  }
+
+  &::after {
+    content: url('../../images/hero/arrow-line.png');
+    position: absolute;
+    top: 353px;
+    right: 28%;
+  }
+
+  .hero__article {
+    width: 500px;
+
+    .hero__heading {
+      @include bold-text($white-color, 56px, 56px);
+      letter-spacing: -2.5px;
+    }
+
+    .hero__text {
+      @include regular-text($white-color);
+      margin: 40px 0;
+    }
+
+    .hero__link {
+      @include yellow-link;
+    }
+
+    .hero__text,
+    .hero__link {
+      margin-left: 113px;
+    }
+  }
+}

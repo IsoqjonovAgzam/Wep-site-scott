@@ -1,0 +1,115 @@
+.header {
+  &__container {
+    .header__list {
+      @include flex-items;
+      align-items: center;
+      justify-content: space-between;
+
+      .header__item:first-of-type {
+        @include flex-items;
+        align-items: center;
+
+        .header__sub-list {
+          margin-left: 58px;
+
+          .header__sub-link + .header__sub-link {
+            padding-top: 36px;
+            padding-bottom: 36px;
+            padding-left: 32px;
+          }
+
+          .header__sub-link {
+            @include bold-text($dim_grey-color, 15px, 25px);
+            transition: 250ms color ease;
+
+            &:hover {
+              color: $yellow-color;
+            }
+          }
+        }
+      }
+      .header__big-link {
+        @include yellow-link;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .header {
+    &__container {
+      max-width: 1307px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    &__container {
+      max-width: 768px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    &__container {
+      max-width: 654px;
+    }
+  }
+}
+
+@media only screen and(max-width: 662px) {
+  .header__item {
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+      content: url('../../images/header/menu.svg');
+      position: absolute;
+      left: -161px;
+      top: 10px;
+    }
+  }
+
+  .header__sub-list,
+  .header__item:last-of-type {
+    display: none;
+  }
+}
+
+@media only screen and(max-width: 420px) {
+  .header__item {
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: -201px;
+    }
+  }
+
+  .header__sub-list,
+  .header__item:last-of-type {
+    display: none;
+  }
+}
+
+@media only screen and(max-width: 375px) {
+  .header__item {
+    margin: 0 auto;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: -261px;
+    }
+  }
+
+  .header__sub-list,
+  .header__item:last-of-type {
+    display: none;
+  }
+}

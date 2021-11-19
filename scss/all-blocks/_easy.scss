@@ -1,0 +1,95 @@
+.easy {
+  margin-bottom: 200px;
+  overflow: hidden;
+
+  &__container {
+    .easy__item:nth-of-type(even) {
+      margin: 160px 0 160px;
+    }
+
+    .easy__item {
+      @include flex-items;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+
+      &:first-of-type::before {
+        content: '';
+        position: absolute;
+        width: 445px;
+        height: 445px;
+        background-color: $light_grey-color;
+        border-radius: 50%;
+        right: -65%;
+      }
+
+      &:first-of-type::after {
+        position: absolute;
+        content: url('../../images/easy/arrow.png');
+        bottom: 50px;
+        left: 69%;
+      }
+
+      .easy__article {
+        width: 445px;
+
+        .easy__heading {
+          @include bold-text($dark_navy-color, 48px, 48px);
+        }
+
+        .easy__text {
+          @include regular-text($dim_grey-color);
+          margin: 24px 0 40px;
+        }
+
+        .easy__link {
+          @include yellow-link;
+        }
+      }
+
+      .easy__image {
+        border-radius: 50%;
+      }
+    }
+
+    .easy__item:nth-of-type(2) {
+      flex-direction: row-reverse;
+
+      &:nth-of-type(2)::before {
+        content: '';
+        position: absolute;
+        width: 445px;
+        height: 445px;
+        background-color: $light_grey-color;
+        border-radius: 50%;
+        left: -65%;
+      }
+
+      &:nth-of-type(2)::after {
+        position: absolute;
+        content: url('../../images/easy/arrow-left.png');
+        bottom: 50px;
+        left: -38%;
+        top: 30%;
+      }
+    }
+    .easy__item {
+      &:last-of-type::before {
+        content: '';
+        position: absolute;
+        width: 445px;
+        height: 445px;
+        background-color: $light_grey-color;
+        border-radius: 50%;
+        right: -65%;
+      }
+      &:nth-of-type(3)::after {
+        position: absolute;
+        content: url('../../images/easy/arrow-right.png');
+        bottom: 50px;
+        right: -38%;
+        top: 30%;
+      }
+    }
+  }
+}

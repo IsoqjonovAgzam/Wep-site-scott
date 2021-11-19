@@ -1,0 +1,78 @@
+.locate {
+  margin-bottom: 200px;
+
+  .line {
+    position: relative;
+    content: '';
+    width: 1015px;
+    height: 12px;
+    background-color: $light_grey-color;
+
+    &::before {
+      content: url('../../images/locate/man.svg');
+      position: absolute;
+      top: -40px;
+      transform: translateX(950px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background-color: $yellow-color;
+    }
+
+    .icons,
+    .icons:nth-of-type(2) {
+      position: relative;
+    }
+
+    .icons {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: url('../../images/locate/phone.svg');
+        position: absolute;
+        top: -50px;
+        transform: translateX(244px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background-color: $yellow-color;
+      }
+
+      &::after {
+        content: url('../../images/locate/scooter.svg');
+        transform: translateX(610px);
+      }
+    }
+  }
+
+  .locate__list {
+    @include flex-items;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 165px;
+
+    .locate__item + .locate__item {
+      margin-left: 30px;
+    }
+
+    .locate__item {
+      width: 350px;
+
+      .locate__heading {
+        @include bold-text($dark_navy-color, 24px, 28px);
+      }
+
+      .locate__text {
+        @include regular-text($dim_grey-color);
+        margin-top: 27px;
+      }
+    }
+  }
+}
